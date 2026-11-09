@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07110d">
+<title>SportPulse — Your Pulse for Every Game</title>
+<style>
+:root{--bg:#07110d;--panel:#101d17;--panel2:#15251d;--green:#42e58b;--muted:#9aada2;--line:#23362b;--white:#f4fff8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:20px max(18px,calc((100% - 1100px)/2));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#09150f}
+.logo{font-size:24px;font-weight:900;letter-spacing:-1px}.logo span{color:var(--green)}.tag{font-size:11px;color:var(--muted);margin-top:3px}
+.live{color:var(--green);font-size:12px;font-weight:800;letter-spacing:1px}
+main{max-width:1100px;margin:auto;padding:24px 18px 50px}
+.hero{padding:28px 24px;border:1px solid #28503a;border-radius:20px;background:linear-gradient(120deg,#10271b,#0b1711 70%);margin-bottom:22px}
+.eyebrow{color:var(--green);font-size:11px;font-weight:800;letter-spacing:1.5px}.hero h1{font-size:clamp(28px,5vw,46px);line-height:1.08;margin:10px 0}.hero p{color:var(--muted);margin:0;max-width:550px}
+.tabs{display:flex;gap:8px;overflow:auto;margin:20px 0}.tab{white-space:nowrap;border:1px solid var(--line);background:var(--panel);color:var(--muted);padding:10px 16px;border-radius:30px;font-weight:700;cursor:pointer}.tab.active{background:var(--green);color:#062012;border-color:var(--green)}
+.section-head{display:flex;align-items:center;justify-content:space-between;margin:25px 0 12px}.section-head h2{font-size:19px;margin:0}.muted{color:var(--muted);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px}
+.league{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.5px;margin-bottom:14px}
+.matchtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.badge{font-size:10px;color:var(--green);font-weight:900}.score{font-size:12px;color:var(--muted)}
+.teamrow{display:flex;align-items:center;justify-content:space-between;padding:7px 0;font-weight:700}.team{display:flex;align-items:center;gap:10px}.crest{width:28px;height:28px;border-radius:50%;background:var(--panel2);display:grid;place-items:center;font-size:10px;color:var(--green);border:1px solid var(--line)}
+.result{font-size:18px;font-weight:900}.foot{border-top:1px solid var(--line);padding-top:10px;margin-top:9px;color:var(--muted);font-size:11px}
+.news{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.news .card h3{font-size:15px;margin:9px 0}.news .card p{font-size:12px;color:var(--muted);line-height:1.5;margin:0}
+.notice{margin-top:20px;padding:13px 15px;border-radius:12px;background:#17251d;color:#b7c9bf;font-size:12px;line-height:1.5;border:1px solid var(--line)}
+footer{text-align:center;color:var(--muted);font-size:11px;padding:25px;border-top:1px solid var(--line)}
+@media(max-width:500px){header{padding:16px}.hero{padding:23px 18px}main{padding:18px 14px 35px}}
+</style>
+</head>
+<body>
+<header><div><div class="logo">SPORT<span>PULSE</span></div><div class="tag">Your Pulse for Every Game.</div></div><div class="live">● SPORTS HUB</div></header>
+<main>
+<section class="hero"><div class="eyebrow">ALL SPORTS. ONE PLACE.</div><h1>Feel every moment<br>of the game.</h1><p>Follow scores, fixtures, results, league tables and the latest sports stories from around the world.</p></section>
+<nav class="tabs" aria-label="Sports"><button class="tab active" data-sport="All">All sports</button><button class="tab" data-sport="Football">Football</button><button class="tab" data-sport="Basketball">Basketball</button><button class="tab" data-sport="Tennis">Tennis</button><button class="tab" data-sport="Cricket">Cricket</button><button class="tab" data-sport="Rugby">Rugby</button></nav>
+<div class="section-head"><h2>Match centre</h2><span class="muted">DEMO SCORES</span></div>
+<section class="grid" id="matches">
+<article class="card" data-sport="Football"><div class="matchtop"><span class="league">PREMIER LEAGUE · FOOTBALL</span><span class="badge">● LIVE</span></div><div class="teamrow"><span class="team"><span class="crest">MU</span>Man United</span><span class="result">2</span></div><div class="teamrow"><span class="team"><span class="crest">MC</span>Man City</span><span class="result">1</span></div><div class="foot">72' · Example match data</div></article>
+<article class="card" data-sport="Basketball"><div class="matchtop"><span class="league">NBA · BASKETBALL</span><span class="badge">● LIVE</span></div><div class="teamrow"><span class="team"><span class="crest">LA</span>LA Lakers</span><span class="result">88</span></div><div class="teamrow"><span class="team"><span class="crest">GS</span>Golden State</span><span class="result">84</span></div><div class="foot">Q3 · Example match data</div></article>
+<article class="card" data-sport="Tennis"><div class="matchtop"><span class="league">ATP TOUR · TENNIS</span><span class="badge">● LIVE</span></div><div class="teamrow"><span class="team"><span class="crest">A</span>Player A</span><span class="result">6–4</span></div><div class="teamrow"><span class="team"><span class="crest">B</span>Player B</span><span class="result">3–2</span></div><div class="foot">Set 2 · Example match data</div></article>
+<article class="card" data-sport="Cricket"><div class="matchtop"><span class="league">INTERNATIONAL · CRICKET</span><span class="badge">● TODAY</span></div><div class="teamrow"><span class="team"><span class="crest">IN</span>Team India</span><span class="result">145/4</span></div><div class="teamrow"><span class="team"><span class="crest">AU</span>Australia</span><span class="result">—</span></div><div class="foot">Example fixture</div></article>
+</section>
+<div class="section-head"><h2>Latest sports news</h2><span class="muted">TOP STORIES</span></div>
+<section class="news"><article class="card"><div class="eyebrow">FOOTBALL</div><h3>Transfer updates and stories</h3><p>Bring the biggest football headlines, club updates and transfer reports together in one place.</p></article><article class="card"><div class="eyebrow">BASKETBALL</div><h3>Courtside coverage</h3><p>Follow major league action, player performances and results from around the world.</p></article><article class="card"><div class="eyebrow">MORE SPORTS</div><h3>Beyond the beautiful game</h3><p>Stay connected to tennis, cricket, rugby, athletics and many more sports.</p></article></section>
+<div class="notice"><strong>Development preview:</strong> These are sample scores and headlines, not live results. The next step is connecting SportPulse to a reliable sports data API so scores, fixtures, tables and news update automatically.</div>
+</main>
+<footer>© 2026 SportPulse · Your Pulse for Every Game.</footer>
+<script>
+document.querySelectorAll('.tab').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));button.classList.add('active');
+ const chosen=button.dataset.sport;
+ document.querySelectorAll('#matches .card').forEach(card=>card.hidden=chosen!=='All'&&card.dataset.sport!==chosen);
+}));
+</script>
+</body>
+</html>
